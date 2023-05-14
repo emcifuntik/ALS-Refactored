@@ -978,7 +978,7 @@ void UAlsAnimationInstance::RefreshFeet(const float DeltaTime)
 	FeetState.FootPlantedAmount = FMath::Clamp(GetCurveValue(UAlsConstants::FootPlantedCurveName()), -1.0f, 1.0f);
 	FeetState.FeetCrossingAmount = GetCurveValueClamped01(UAlsConstants::FeetCrossingCurveName());
 
-	FeetState.MinMaxPelvisOffsetZ = FVector2D::ZeroVector;
+	FeetState.MinMaxPelvisOffsetZ = FVector2f::ZeroVector;
 
 	const auto ComponentTransformInverse{GetProxyOnAnyThread<FAnimInstanceProxy>().GetComponentTransform().Inverse()};
 
